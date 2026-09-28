@@ -31,10 +31,12 @@ In this experiment, the VAE had the lowest FID. The collapsed GAN had a lower FI
 
 ## Best Generated Image Grid
 
+The VAE generated samples showed greater visual diversity across the 16 generated images.
+
 ![Best Generated Image Grid](best_generated_grid.png)
 
 ## Notebook
 
-The complete lab notebook, code, outputs, FID calculations, and reflections are available in:
+The complete lab notebook, code, outputs, FID calculations, and reflections are available here:
 
-`lab1.ipynb`
+[Open Lab 1 Notebook](lab1.ipynb)
