@@ -32,5 +32,13 @@ phones). Code then turns the JSON into the HTML page and QR code.
 
 ## Result
 
-<!-- TODO after the real run: fill in from the results table -->
-**Winner: TODO** because TODO (one sentence).
+| Variation | Avg Correctness | Format Pass Rate | Avg Tokens | Cost/1K calls |
+|---|---|---|---|---|
+| V1 zero-shot | 1.0 | 0% | 1,207 | $1.91 |
+| V2 few-shot | 4.8 | 100% | 3,473 | $3.53 |
+| V3 chain-of-thought | 1.0 | 0% | 1,309 | $1.81 |
+| V4 role + structured | 4.4 | 100% | 1,788 | $2.15 |
+| V5 hybrid | 4.8 | 100% | 2,288 | $2.54 |
+
+**Winner: V5 hybrid**, because it ties few-shot for the best correctness (4.8, 100% format) at 28% lower cost,
+teaching the format with written rules instead of extra example images.

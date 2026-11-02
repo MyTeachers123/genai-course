@@ -5,24 +5,29 @@
 ## Part 1: Prompt variations
 
 Task: read a family child care price-list flyer (image) and return JSON for a web price sheet.
-Inputs: 5 real flyers from my work. Model: gpt-5.4-mini, images resized to 768 px wide.
+Inputs: 5 real flyers from my work. Model: gpt-5.4-mini, images resized to 768 px wide. Run on 2026-11-02.
 
 | Variation | Avg Correctness | Format Pass Rate | Avg Usefulness | Avg Tokens | Cost/1K calls |
 |---|---|---|---|---|---|
-| V1 zero-shot | TODO | TODO | TODO | TODO | TODO |
-| V2 few-shot | TODO | TODO | TODO | TODO | TODO |
-| V3 chain-of-thought | TODO | TODO | TODO | TODO | TODO |
-| V4 role + structured | TODO | TODO | TODO | TODO | TODO |
-| V5 hybrid | TODO | TODO | TODO | TODO | TODO |
+| V1 zero-shot | 1.0 | 0% | TODO | 1,207 | $1.91 |
+| V2 few-shot | 4.8 | 100% | TODO | 3,473 | $3.53 |
+| V3 chain-of-thought | 1.0 | 0% | TODO | 1,309 | $1.81 |
+| V4 role + structured | 4.4 | 100% | TODO | 1,788 | $2.15 |
+| V5 hybrid | 4.8 | 100% | TODO | 2,288 | $2.54 |
 
-**Winner:** TODO, because TODO.
+**Winner: V5 hybrid**, because it ties V2 for the best correctness (4.8, 100% format) at 28% lower cost
+($2.54 vs $3.53 per 1K calls), since it teaches the format with written rules instead of two extra images.
 
-Notes to check against the results:
-- Most tokens in this task are **image tokens**. V2 sends three images (two examples and the flyer),
-  so it should cost roughly three times as much as the others. Is the accuracy gain worth it?
-- The age conversion ("2 - 4 years" becomes 24 to 59 months) only appears in V3 (as a step), V5 (as a rule)
-  and V2 (through examples). V1 and V4 have to guess the convention. Did their age ranges differ?
-- Which fields failed most often: names in Chinese, phone language labels, or prices?
+Observations:
+- **Format is the dividing line.** V1 and V3 read the flyers but never produced JSON in my schema
+  (0% format pass), so they score 1 no matter how well they read. V1 was never told the field names, and V3's
+  long reasoning made the final JSON drift from the schema. Everything that gave the schema or examples
+  (V2, V4, V5) passed 100%.
+- **Rules beat a bare schema for meaning.** V4 had the schema but no rules and scored 4.4; V5 added explicit
+  rules (age conversion to months, line-level units, nulls) and scored 4.8. The schema fixes the shape; the
+  rules fix what the values mean.
+- **Image tokens dominate cost.** Text is only 19-1,147 tokens per call; the rest is the image (about 1,100
+  tokens). V2 sends three images, so it is the most expensive even though its text prompt is short.
 
 ## Part 2: Failure analysis (about 200 words)
 
