@@ -1,0 +1,39 @@
+{
+ "checked_on": "2026-11-01",
+ "results": [
+  {
+   "license": "198021766",
+   "flyer": "f1",
+   "status": "VERIFIED (secondary source)",
+   "cdss_name": "Wang Hua Family Child Care",
+   "city": "West Covina",
+   "capacity": 14,
+   "license_date": "2025-07-25",
+   "source": "ReadyRule mirror of CCLD records, refreshed 2026-11-02 (CDSS transparency API returned 503)"
+  },
+  {
+   "license": "198021713",
+   "flyer": "f2",
+   "status": "NOT FOUND",
+   "source": "CDSS transparency API 503; CHHS open data (2025-05-25) and ReadyRule: no record"
+  },
+  {
+   "license": "198401327",
+   "flyer": "f3",
+   "status": "NOT FOUND",
+   "source": "CDSS transparency API 503; CHHS open data (2025-05-25) and ReadyRule: no record"
+  },
+  {
+   "license": "304314565",
+   "flyer": "f4",
+   "status": "NOT FOUND",
+   "source": "CDSS transparency API 503; CHHS open data (2025-05-25) and ReadyRule: no record"
+  },
+  {
+   "license": "304314798",
+   "flyer": "f5",
+   "status": "NOT FOUND",
+   "source": "CDSS transparency API 503; CHHS open data (2025-05-25) and ReadyRule: no record"
+  }
+ ]
+}

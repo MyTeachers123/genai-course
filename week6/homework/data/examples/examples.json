@@ -1,0 +1,90 @@
+[
+ {
+  "image": "examples/ex1.jpg",
+  "json": {
+   "license_number": "191234567",
+   "program_name": "Sample Sprout Family Child Care",
+   "program_name_alt": null,
+   "price_unit": "week",
+   "prices": [
+    {
+     "label": "6 weeks - 11 months",
+     "age_min_months": 1,
+     "age_max_months": 11,
+     "amount": 520,
+     "unit": null
+    },
+    {
+     "label": "12 - 35 months",
+     "age_min_months": 12,
+     "age_max_months": 35,
+     "amount": 470,
+     "unit": null
+    },
+    {
+     "label": "3 years +",
+     "age_min_months": 36,
+     "age_max_months": null,
+     "amount": 410,
+     "unit": null
+    }
+   ],
+   "street": "100 Example Rd",
+   "city": "Pasadena",
+   "zip": "91101",
+   "phones": [
+    {
+     "number": "555.010.0101",
+     "language": "Spanish"
+    },
+    {
+     "number": "555.010.0102",
+     "language": "English"
+    }
+   ],
+   "needs_clarification": null
+  }
+ },
+ {
+  "image": "examples/ex2.jpg",
+  "json": {
+   "license_number": "301234567",
+   "program_name": "Maple Tree Home Daycare",
+   "program_name_alt": null,
+   "price_unit": null,
+   "prices": [
+    {
+     "label": "Infants",
+     "age_min_months": null,
+     "age_max_months": null,
+     "amount": 2400,
+     "unit": "month"
+    },
+    {
+     "label": "Toddlers",
+     "age_min_months": null,
+     "age_max_months": null,
+     "amount": 2100,
+     "unit": "month"
+    },
+    {
+     "label": "Drop-in",
+     "age_min_months": null,
+     "age_max_months": null,
+     "amount": 18,
+     "unit": "hour"
+    }
+   ],
+   "street": null,
+   "city": "Anaheim",
+   "zip": "92801",
+   "phones": [
+    {
+     "number": "555.010.0199",
+     "language": null
+    }
+   ],
+   "needs_clarification": null
+  }
+ }
+]
