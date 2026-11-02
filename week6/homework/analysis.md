@@ -9,11 +9,13 @@ Inputs: 5 real flyers from my work.
 
 | Variation | Avg Correctness | Format Pass Rate | Avg Usefulness | Avg Tokens | Cost/1K calls |
 |---|---|---|---|---|---|
-| V1 zero-shot | 1.0 | 0% | not scored | 1,207 | $1.91 |
-| V2 few-shot | 4.8 | 100% | not scored | 3,473 | $3.53 |
-| V3 chain-of-thought | 1.0 | 0% | not scored | 1,309 | $1.81 |
-| V4 role + structured | 4.4 | 100% | not scored | 1,788 | $2.15 |
-| V5 hybrid | 4.8 | 100% | not scored | 2,288 | $2.54 |
+| V1 zero-shot | 1.0 | 0% | 1 | 1,207 | $1.91 |
+| V2 few-shot | 4.8 | 100% | 4 | 3,473 | $3.53 |
+| V3 chain-of-thought | 1.0 | 0% | 1 | 1,309 | $1.81 |
+| V4 role + structured | 4.4 | 100% | 3 | 1,788 | $2.15 |
+| V5 hybrid | 4.8 | 100% | 5 | 2,288 | $2.54 |
+
+Usefulness (1-5) is my own judgment of whether I could build the web price sheet from the reply without editing it: V1 = 1 (invented field names, every reply would need rewriting), V2 = 4 (correct, but three images per call make it the most expensive), V3 = 1 (wrong unit value on every flyer), V4 = 3 (right shape, but some ages and names needed manual fixes), V5 = 5 (I could generate the page directly from the JSON).
 
 **Winner: V5 hybrid**, because it ties V2 for the best correctness (4.8, 100% format) at 28% lower cost
 ($2.54 vs $3.53 per 1K calls), since it teaches the format with written rules instead of two extra images.
