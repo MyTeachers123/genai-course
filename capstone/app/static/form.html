@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Find affordable child care - USCIC</title>
+<style>
+ :root{--ink:#1f2933;--muted:#52606d;--line:#d9e2ec;--brand:#2f6f4f;--bg:#f7faf8}
+ body{margin:0;font:16px/1.5 system-ui,sans-serif;color:var(--ink);background:var(--bg)}
+ main{max-width:620px;margin:0 auto;padding:24px 16px}
+ h1{font-size:1.5rem;margin:0 0 4px} p.lead{color:var(--muted);margin:0 0 20px}
+ label{display:block;font-weight:600;margin:16px 0 6px}
+ input,textarea{width:100%;box-sizing:border-box;padding:10px;border:1px solid var(--line);border-radius:8px;font:inherit;background:#fff}
+ textarea{min-height:140px} small{color:var(--muted)}
+ button{margin-top:20px;background:var(--brand);color:#fff;border:0;border-radius:8px;padding:12px 20px;font:inherit;cursor:pointer}
+ #out{margin-top:20px;padding:12px;border-radius:8px;background:#fff;border:1px solid var(--line);display:none}
+</style>
+</head>
+<body><main>
+<h1>Find affordable child care</h1>
+<p class="lead">Write in any language. We only share your needs (not your name or contact) with licensed daycares in your ZIP code.</p>
+<form id="f">
+ <label for="answer">Tell us about your child care needs</label>
+ <small>Your ZIP code, your children's ages, which days and hours, and the most you can pay per month.</small>
+ <textarea id="answer" required minlength="10"></textarea>
+ <label for="email">Email</label><input id="email" type="email" required>
+ <label for="phone">Phone</label><input id="phone" type="tel" required>
+ <small>Your email and phone are encrypted and used only by USCIC to send you the daycare link.</small>
+ <br><button type="submit">Send</button>
+</form>
+<div id="out" role="status"></div>
+<script>
+document.getElementById('f').addEventListener('submit', async e => {
+  e.preventDefault();
+  const out = document.getElementById('out'); out.style.display = 'block'; out.textContent = 'Sending...';
+  const r = await fetch('/api/intake', {method: 'POST', headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({answer: answer.value, email: email.value, phone: phone.value})});
+  const j = await r.json();
+  out.textContent = r.ok ? `Thank you. We asked ${j.requests_sent} daycare(s) near you. We will email you when one says yes.`
+                         : `Please check your answer: ${j.detail}`;
+});
+</script>
+</main></body></html>
