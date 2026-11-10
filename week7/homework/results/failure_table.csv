@@ -1,0 +1,3 @@
+#,Question,Failure Type,Root Cause,Proposed Fix
+6,What is Medi-Cal?,A,"answer chunk ranked #6.0 by MiniLM, outside k=4",raise k to 6.0 or add a cross-encoder re-ranker over the top 20
+7,Who can receive WIC benefits?,C,answer broke the 3-sentence + Source line format,"return JSON {answer, sources} validated by Pydantic and render the Source line in code"
