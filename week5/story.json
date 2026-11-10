@@ -1,0 +1,22 @@
+{
+  "scenes": [
+    {
+      "id": 1,
+      "title": "Pip Meets the Family",
+      "narration": "Pip the little robot beeped with joy as he met the new family and their baby, Ellie.",
+      "image_prompt": "A cute, small robot with a friendly face meeting a family with a baby in their living room."
+    },
+    {
+      "id": 2,
+      "title": "The Search Begins",
+      "narration": "Pip zoomed around the town, checking different daycares to find the perfect one for Ellie.",
+      "image_prompt": "A small robot visiting colorful daycare centers, surrounded by children playing and laughing."
+    },
+    {
+      "id": 3,
+      "title": "A Happy Choice",
+      "narration": "Pip found a daycare full of smiles and fun, and Ellie giggled with delight when she arrived.",
+      "image_prompt": "A happy baby being welcomed at a cheerful daycare with friendly staff and playful children."
+    }
+  ]
+}
