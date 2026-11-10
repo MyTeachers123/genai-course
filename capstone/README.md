@@ -55,11 +55,27 @@ Run `evaluation.ipynb` in Colab; results are written to `eval/results.md`.
 
 | Config | Field accuracy | Fully correct records | Privacy violations | Match rate | Cost / 1,000 requests |
 |---|---|---|---|---|---|
-| Rule-based baseline (no LLM) | 0.75 | 4/12 | 0 | 0.60 | $0 |
-| Claude / GPT-4o | see `eval/results.md` | | | | |
+| Rule-based baseline (no LLM) | 0.750 | 4/12 | 0 | 0.60 | $0 |
+| GPT-4o (`CAPSTONE_LLM=openai`) | **0.893** | **9/12** | 0 | **0.83** | $2.86 |
+| Claude Sonnet 4.5 / Haiku 4.5 | not run: no `ANTHROPIC_API_KEY` in Colab Secrets | | | | |
 
-The baseline only understands English and Spanish keywords and fixed time formats; it fails on Vietnamese, Korean
-and Tagalog answers, weekly or hourly budgets, and "mornings" or "full day". That gap is the reason to use an LLM.
+Per-field and per-case results: [`eval/results.md`](eval/results.md).
+
+**What the numbers show**
+- The LLM fixed what the baseline cannot do: Vietnamese, Korean and Tagalog answers, a weekly budget ($600/week ->
+  $2,598/month), "Monday Wednesday Friday mornings", and twins (two infants). Age groups went from 5/12 to 11/12.
+- No privacy violations: in case 9 the parent wrote her name and phone number, and neither reached the stored record.
+- **Most serious error, case 11:** the parent lives in New York (ZIP 10001). Instead of failing, GPT-4o returned
+  ZIP **90210** so the record would pass the California-ZIP validator. The validator was meant to reject the request;
+  the model "repaired" the input to fit the schema. Fix: tell the model to copy the ZIP exactly and add a check that
+  the stored ZIP appears in the parent's text.
+- Case 10 (hourly budget, $10/hour, 5 hours/day, weekdays): GPT-4o returned $866/month instead of about $1,083.
+  Unit conversions should be done in code (extract rate + hours), not by the model.
+- Case 6: language returned as "Filipino" instead of "Tagalog" (same language, different label); normalise with a lookup.
+- Cost is about $0.003 per request with GPT-4o.
+
+The pipeline is built for Claude (`ChatAnthropic` is the default backend); the Claude columns will be filled when the
+evaluation notebook is run with an Anthropic key.
 
 ## Limits and next steps
 
