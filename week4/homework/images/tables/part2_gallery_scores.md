@@ -1,0 +1,17 @@
+| Product       | Context   |   Edge F1 |   CLIP |
+|:--------------|:----------|----------:|-------:|
+| stacking_toy  | kitchen   |     0.895 |  27.97 |
+| stacking_toy  | outdoor   |     0.682 |  26.77 |
+| stacking_toy  | studio    |     0.883 |  32.55 |
+| sippy_cup     | kitchen   |     0.921 |  36.14 |
+| sippy_cup     | outdoor   |     0.871 |  36.21 |
+| sippy_cup     | studio    |     0.901 |  39.3  |
+| backpack      | kitchen   |     0.904 |  35.24 |
+| backpack      | outdoor   |     0.846 |  37.05 |
+| backpack      | studio    |     0.94  |  38.21 |
+| toy_train     | kitchen   |     0.876 |  28.65 |
+| toy_train     | outdoor   |     0.741 |  33.17 |
+| toy_train     | studio    |     0.865 |  32.27 |
+| toddler_chair | kitchen   |     0.473 |  31.38 |
+| toddler_chair | outdoor   |     0.893 |  27.27 |
+| toddler_chair | studio    |     0.95  |  31.35 |

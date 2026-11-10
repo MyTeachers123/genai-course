@@ -1,0 +1,21 @@
+Part,Prompt (first 50 chars),Setting,CLIP Score
+1 CFG sweep,a photorealistic macro photograph of a honeybee on,CFG 1.5,0.3485
+1 CFG sweep,a photorealistic macro photograph of a honeybee on,CFG 4.0,0.3537
+1 CFG sweep,a photorealistic macro photograph of a honeybee on,CFG 7.5,0.3475
+1 CFG sweep,a photorealistic macro photograph of a honeybee on,CFG 12.0,0.38
+1 CFG sweep,a photorealistic macro photograph of a honeybee on,CFG 20.0,0.3415
+1 Scheduler,a photorealistic macro photograph of a honeybee on,"DPMSolverMultistep, 18.43s",0.3562
+1 Scheduler,a photorealistic macro photograph of a honeybee on,"DDIM, 19.01s",0.3465
+2 ControlNet,"aerial view, a futuristic research complex in a br",scale 0.0,0.3592
+2 ControlNet,"aerial view, a futuristic research complex in a br",scale 0.5,0.2976
+2 ControlNet,"aerial view, a futuristic research complex in a br",scale 1.0,0.2523
+3 Linear interp,a watercolor painting of a lighthouse on a rocky c,t=0.0,0.3698
+3 Linear interp,a watercolor painting of a lighthouse on a rocky c,t=0.25,0.3717
+3 Linear interp,a watercolor painting of a lighthouse on a rocky c,t=0.5,0.3694
+3 Linear interp,a watercolor painting of a lighthouse on a rocky c,t=0.75,0.3727
+3 Linear interp,a watercolor painting of a lighthouse on a rocky c,t=1.0,0.3825
+3 Noise slerp,a watercolor painting of a lighthouse on a rocky c,t=0.0,0.3698
+3 Noise slerp,a watercolor painting of a lighthouse on a rocky c,t=0.25,0.3697
+3 Noise slerp,a watercolor painting of a lighthouse on a rocky c,t=0.5,0.366
+3 Noise slerp,a watercolor painting of a lighthouse on a rocky c,t=0.75,0.3848
+3 Noise slerp,a watercolor painting of a lighthouse on a rocky c,t=1.0,0.3825

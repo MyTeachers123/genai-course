@@ -1,0 +1,16 @@
+Config,Prompt,CLIP Score,LPIPS vs best,Reference,Rating 1-5,Notes
+A,P1: a storefront sign of a small daycare that rea,32.54,0.6,Config B,2,"The sign has a misspelling with 'Seats' written as 'Seatss', which affects the accuracy and quality."
+B,P1: a storefront sign of a small daycare that rea,32.91,0.0,Config B,5,"The image perfectly follows the prompt with a clear storefront sign reading 'OPEN SEATS' in bold letters, and the overall visual quality is excellent."
+C,P1: a storefront sign of a small daycare that rea,31.03,0.729,Config B,2,"The sign text is misspelled as 'OPEN ATE' instead of 'OPEN SEATS', affecting accuracy and clarity."
+A,P2: three red apples and two green pears on a woo,34.37,0.0,Config A,2,"The image contains more than two green pears, which does not follow the prompt's specified count."
+B,P2: three red apples and two green pears on a woo,32.38,0.657,Config A,2,"The image has three red apples and three green pears, not two, which does not follow the prompt."
+C,P2: three red apples and two green pears on a woo,31.54,0.806,Config A,2,The image contains one red apple and two green apples instead of three red apples and two green pears.
+A,P3: a blue cup to the left of a yellow bowl on a ,35.45,0.0,Config A,2,"The image has a blue cup and a yellow bowl, but the cup is not to the left of the bowl, and there are extra objects."
+B,P3: a blue cup to the left of a yellow bowl on a ,33.81,0.405,Config A,2,The image does not follow the prompt as there is no blue cup and the yellow bowl is not to the right of a blue cup.
+C,P3: a blue cup to the left of a yellow bowl on a ,34.36,0.587,Config A,2,"The image only contains a yellow bowl on a white table, missing the blue cup."
+A,P4: a cozy reading nook with a beanbag and a book,40.18,0.0,Config A,3,"The image includes a cozy reading nook and bookshelves, but lacks a beanbag, affecting prompt accuracy."
+B,P4: a cozy reading nook with a beanbag and a book,36.35,0.561,Config A,5,"The image perfectly follows the prompt with a beanbag, bookshelf, and cozy atmosphere, and the watercolor style is visually appealing."
+C,P4: a cozy reading nook with a beanbag and a book,36.5,0.611,Config A,3,"The image lacks a beanbag and instead features an armchair, which does not fully match the prompt."
+A,P5: a modern single-story house with a fenced bac,32.0,0.719,Config C,5,"The image perfectly depicts a modern single-story house with a fenced backyard playground during golden hour, with excellent visual quality."
+B,P5: a modern single-story house with a fenced bac,31.18,0.776,Config C,3,"The image shows a modern single-story house but lacks a visible fenced backyard playground, and the visual quality is good."
+C,P5: a modern single-story house with a fenced bac,34.22,0.0,Config C,3,"The image captures a fenced backyard playground at golden hour, but the house is not visible, affecting prompt adherence."

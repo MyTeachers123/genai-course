@@ -1,0 +1,17 @@
+| Domain   | Prompt level   | Scheduler   |   Seconds |   CLIP (own prompt) |   CLIP (intent) | File                                  |
+|:---------|:---------------|:------------|----------:|--------------------:|----------------:|:--------------------------------------|
+| interior | abstract       | DPM++ 2M    |      34   |               26.46 |           17.45 | interior_abstract_DPMpp2M_seed42.png  |
+| interior | specific       | DPM++ 2M    |      30.8 |               35.55 |           37.76 | interior_specific_DPMpp2M_seed42.png  |
+| interior | technical      | DPM++ 2M    |      33.6 |               36.25 |           37.04 | interior_technical_DPMpp2M_seed42.png |
+| interior | specific       | Euler       |      37.5 |               36.36 |           38.09 | interior_specific_Euler_seed42.png    |
+| interior | technical      | Euler       |      35.7 |               37.67 |           38.22 | interior_technical_Euler_seed42.png   |
+| product  | abstract       | DPM++ 2M    |      36.1 |               26.4  |           21.61 | product_abstract_DPMpp2M_seed42.png   |
+| product  | specific       | DPM++ 2M    |      36.2 |               38.85 |           37.6  | product_specific_DPMpp2M_seed42.png   |
+| product  | technical      | DPM++ 2M    |      36   |               35.92 |           34.98 | product_technical_DPMpp2M_seed42.png  |
+| product  | specific       | Euler       |      36.2 |               39.33 |           38.28 | product_specific_Euler_seed42.png     |
+| product  | technical      | Euler       |      36.2 |               34.49 |           33.51 | product_technical_Euler_seed42.png    |
+| outdoor  | abstract       | DPM++ 2M    |      36   |               24.17 |           23.07 | outdoor_abstract_DPMpp2M_seed42.png   |
+| outdoor  | specific       | DPM++ 2M    |      36.1 |               33.72 |           32.6  | outdoor_specific_DPMpp2M_seed42.png   |
+| outdoor  | technical      | DPM++ 2M    |      36   |               33.09 |           29.58 | outdoor_technical_DPMpp2M_seed42.png  |
+| outdoor  | specific       | Euler       |      35.8 |               32.42 |           30.69 | outdoor_specific_Euler_seed42.png     |
+| outdoor  | technical      | Euler       |      35.8 |               33.56 |           30.28 | outdoor_technical_Euler_seed42.png    |

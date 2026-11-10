@@ -1,0 +1,8 @@
+| Domain   | Prompt level   |   DPM++ 2M |   Euler |   Euler - DPM++ |
+|:---------|:---------------|-----------:|--------:|----------------:|
+| interior | specific       |      35.55 |   36.36 |            0.81 |
+| interior | technical      |      36.25 |   37.67 |            1.42 |
+| outdoor  | specific       |      33.72 |   32.42 |           -1.3  |
+| outdoor  | technical      |      33.09 |   33.56 |            0.47 |
+| product  | specific       |      38.85 |   39.33 |            0.48 |
+| product  | technical      |      35.92 |   34.49 |           -1.43 |
