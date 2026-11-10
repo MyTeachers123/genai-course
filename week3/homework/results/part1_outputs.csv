@@ -1,0 +1,82 @@
+Task,Model,output
+A_summary,gpt-4o,"Head Start, established in 1965, is a comprehensive program by the U.S. Department of Health and Human Services aimed at providing early childhood education, health, nutrition, and parent involvement services to low-income families. Initially launched as a summer program, it has expanded over the years to serve over 1 million children annually across the U.S., including specialized services for migrant, seasonal, and homeless children. The program's governance includes a Policy Council composed of parents and community representatives, which plays a crucial role in decision-making and fundraising activities."
+B_extraction,gpt-4o,"{
+    ""people"": [],
+    ""organisations"": [
+        ""California Work Opportunities and Responsibility to Kids (CalWORKs)"",
+        ""Temporary Assistance for Needy Families (TANF)"",
+        ""California Department of Social Services (CDSS)"",
+        ""Los Angeles County Department of Public Social Services (DPSS)"",
+        ""Census Bureau"",
+        ""Public Policy Institute of California""
+    ],
+    ""dates"": [
+        ""1997"",
+        ""1996""
+    ],
+    ""key_claims"": [
+        ""CalWORKs provides cash aid and services to eligible needy California families."",
+        ""There is a lifetime cap of 48 months of benefits received under CalWORKs."",
+        ""CalWORKs reduces the California Poverty Measure (CPM) poverty rate by 1 percentage point."",
+        ""CalWORKs is managed by the California Department of Social Services (CDSS) and administered locally by the 58 counties of California."",
+        ""CalWORKs was created by the Welfare-to-Work Act of 1997.""
+    ]
+}"
+C_reasoning,gpt-4o,"To determine the monthly profit for the licensed family child care home, we need to calculate both the total monthly revenue and the total monthly costs. Let's break it down step by step.
+
+### Current Situation
+
+#### Step 1: Calculate Monthly Revenue
+- **Infants**: 2 infants × $1,600 per infant = $3,200
+- **Toddlers**: 6 toddlers × $1,300 per toddler = $7,800
+- **School-age children**: 3 children × $700 per child = $2,100
+
+**Total Monthly Revenue** = $3,200 (infants) + $7,800 (toddlers) + $2,100 (school-age)  
+**Total Monthly Revenue** = $13,100
+
+#### Step 2: Calculate Monthly Costs
+- **Rent**: $2,500
+- **Assistant**: $3,200
+- **Food**: (2 infants + 6 toddlers) × $4 per child per day × 22 days  
+  = 8 children × $4 × 22  
+  = $704
+
+**Total Monthly Costs** = $2,500 (rent) + $3,200 (assistant) + $704 (food)  
+**Total Monthly Costs** = $6,404
+
+#### Step 3: Calculate Monthly Profit
+**Monthly Profit Now** = Total Monthly Revenue - Total Monthly Costs  
+**Monthly Profit Now** = $13,100 - $6,404  
+**Monthly Profit Now** = $6,696
+
+### New Situation (Replacing One Toddler with One Infant)
+
+#### Step 4: Calculate New Monthly Revenue
+- **Infants**: 3 infants × $1,600 per infant = $4,800
+- **Toddlers**: 5 toddlers × $1,300 per toddler = $6,500
+- **School-age children**: 3 children × $700 per child = $2,100
+
+**Total New Monthly Revenue** = $4,800 (infants) + $6,500 (toddlers) + $2,100 (school-age)  
+**Total New Monthly Revenue** = $13,400
+
+#### Step 5: Calculate New Monthly Costs
+- **Rent**: $2,500
+- **Assistant**: $3,200
+- **Food**: (3 infants + 5 toddlers) × $4 per child per day × 22 days  
+  = 8 children × $4 × 22  
+  = $704
+
+**Total New Monthly Costs** = $2,500 (rent) + $3,200 (assistant) + $704 (food)  
+**Total New Monthly Costs** = $6,404
+
+#### Step 6: Calculate New Monthly Profit
+**New Monthly Profit** = Total New Monthly Revenue - Total New Monthly Costs  
+**New Monthly Profit** = $13,400 - $6,404  
+**New Monthly Profit** = $6,996
+
+### Change in Profit
+**Change in Profit** = New Monthly Profit - Monthly Profit Now  
+**Change in Profit** = $6,996 - $6,696  
+**Change in Profit** = $300
+
+FINAL: profit_now=$6,696, profit_new=$6,996, change=$300"

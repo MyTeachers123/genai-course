@@ -1,0 +1,6 @@
+| Version             |   Correctness |   Format |   Usefulness |   Tokens | Notes                                                                                                     |
+|:--------------------|--------------:|---------:|-------------:|---------:|:----------------------------------------------------------------------------------------------------------|
+| V1 zero-shot        |             5 |        5 |            5 |      447 | The output accurately reflects all expected decisions and action items with correct owners and due dates. |
+| V2 few-shot         |             4 |        5 |            4 |      579 | The main problem is the incorrect phrasing of the decision regarding the Vietnamese form.                 |
+| V3 chain-of-thought |             4 |        4 |            4 |      615 | The summary missed the decision on the Vietnamese form and slightly altered action item descriptions.     |
+| V4 role + Pydantic  |             5 |        5 |            5 |      711 | The output accurately reflects all expected decisions and action items with correct details.              |
